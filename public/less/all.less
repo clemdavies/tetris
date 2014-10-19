@@ -1,0 +1,49 @@
+/* all.less */
+
+@import 'variables.less';
+@import 'functions.less';
+
+html{
+}
+
+#container
+{
+  width:500px;
+  margin:auto;
+  h1
+  {
+    text-align: center;
+  }
+}
+.stage{
+  h3{
+    text-align:center;
+  }
+}
+.gameboard
+{
+  width:160px;
+  margin:auto;
+  section[class^='Y-']{
+    &:nth-child(odd){
+      color:green;
+    }
+    &:nth-child(even){
+      color:blue;
+    }
+    div{
+      width:30px;
+      height:30px;
+      display:inline-block;
+      margin:1px;
+      &.on{
+        background:green;
+      }
+      &.off{
+        background:black;
+      }
+    }
+
+  }
+
+}
